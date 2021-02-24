@@ -8,7 +8,8 @@ const UserSchema = new Schema({
     password: {
         type: String,
         required: true
-    }
+    },
+    refreshTokens: [{ token: { type: String } }],
 }, { timestamps: true })
 
 module.exports = UserSchema
